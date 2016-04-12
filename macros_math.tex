@@ -1,0 +1,272 @@
+\usepackage{amsmath}
+
+%-------------------------------------------------------------------------------
+\newcommand{\naturel}{\mathbb{N}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\rational}{\mathbb{Q}}
+\renewcommand{\real}{\mathbb{R}} %Already defined in physics package
+\newcommand{\complex}{\mathbb{C}}
+%-------------------------------------------------------------------------------
+
+%Logical
+\def\implies{\Rightarrow}
+\def\equivalence{\Leftrightarrow}
+\newcommand\hyperstructure[1]{ { }^{*}#1}
+\def\hyperreal{\hyperstructure{\real}}
+%-------------------------------------------------------------------------------
+
+% Calculability
+\def\recursiveFunctionsSet{\mathcal{R}}
+\def\primitiveRecursiveFunctionSet{\mathcal{RP}}
+\def\muRecursiveFunctionSet{\mathcal{R}_{\mu}}
+%-------------------------------------------------------------------------------
+
+%Set theory
+\def\union{\cup} %Union
+\def\inter{\cap} %Intersection
+\newcommand{\comp}[1]{#1^{c}} %Complementary
+\def\cartprod{\cross}
+\newcommand{\cardinal}[1]{|#1|}
+\newcommand{\powerSet}[1]{\mathcal{P}(#1)}
+%-------------------------------------------------------------------------------
+
+%Topology
+\def\interior{\mathring}
+\def\adh{\overline}
+%-------------------------------------------------------------------------------
+
+%Algebra
+
+% Linear algebra
+
+\newcommand{\matrixSpace}[2]{M_{#1}(#2)}
+\newcommand{\inversibleMatrixSpace}[2]{GL_{#1}(#2)}
+\newcommand{\spanspace}[1]{\left<#1\right>}
+
+% Group theory
+
+\def\isomorphe{\simeq}
+\newcommand{\ordergroup}[1]{|#1|}
+\newcommand{\GSautomorphismDef}[2]{Aut_{\text{#1}}(#2)}
+\newcommand{\generatedGroup}[1]{\left<#1\right>}
+\newcommand{\permutationGroup}[1]{\mathfrak{S}(#1)}
+
+% Field theory
+
+%extensionDegree
+\newcommand{\extensionDegree}[2]{[#1 : #2]}
+\newcommand{\extensionField}[2]{#1/#2}
+
+%plongement
+\newcommand{\plongement}[3]{Hom_{#1}(#2, #3)}
+
+%Galois group
+\newcommand{\galoisGroup}[2]{G(#1, #2)}
+
+% Spectrum Theory
+\newcommand{\spectrum}[1]{\sigma(#1)}
+\newcommand{\resolvant}[1]{\rho(#1)}
+
+\def\Ldeux{\mathcal{L}^{2}}
+\def\Ldeuxstar{(\mathcal{L}^{2})^{*}}
+
+%GSsequence :
+%		#1 : represention of elements of the sequences
+%		#2 : indices
+%		#3 : set definition
+\newcommand{\GSsequence}[3]{(#1_{#2})_{#2 \in #3}}
+
+%GSsetDef :
+%		#1 : set elements
+\newcommand{\GSset}[1]{\left\{ #1 \right\}}
+
+%GSsetDef :
+%		#1 : global set
+%		#2 : condition
+\newcommand{\GSsetDef}[2]{\left\{#1 \, | \, #2 \right\}}
+
+%GSprodSet :
+%		#1 : indice
+%		#2 : begin indice
+%		#3 : end indice
+%		#4 : set
+\newcommand{\GSprodSet}[4]{\displaystyle \prod_{#1 = #2}^{#3} #4_{#1}}
+
+%GSsum :
+%		#1 : indice
+%		#2 : begin indice
+%		#3 : end indice
+%		#4 : element
+\newcommand{\GSsum}[4]{\displaystyle \sum_{#1 = #2}^{#3} #4}
+
+\newcommand{\GSintervalCC}[2]{\left[#1, #2\right]}
+%-------------------------------------------------------------------------------
+
+%Analysis :
+
+% conjuguate
+\def\conjuguate{\overline}
+
+% miLength: multi-indice length
+\newcommand{\miLength}[1]{|#1|}
+
+% segment: all points between two points given
+\newcommand{\segment}[2]{S(#1, #2)}
+
+%GSfunction :
+%       #1 : name function
+%       #2 : begin set
+%       #3 : end set
+\newcommand{\GSfunction}[3]{#1 : #2 \rightarrow #3}
+
+%GSnorme : Deprecated --> \norm
+%		#1 : elements which norme is applied on
+\newcommand{\GSnorme}[1]{\norm{#1}}
+
+%GSnormeDef :
+%		#1 : elements which norme is applied on
+%		#2 : norme indice
+\newcommand{\GSnormeDef}[2]{\norm{#1}_{#2}}
+
+%GSnormedSpace :
+%		#1 : vectorial space
+%		#2 : \GSnorme[Def] with dot as element.
+\newcommand{\GSnormedSpace}[2]{(#1, #2)}
+
+%Identification
+\def\identification{\simeq}
+
+%GSdual
+%		#1 : vectorial space
+\newcommand{\GSdual}[1]{#1^{*}}
+
+%GSbidual
+%		#1 : vectorial space
+\newcommand{\GSbidual}[1]{#1^{**}}
+
+\newcommand{\GSunitBoule}[1]{\mathcal{B}_{#1}}
+\newcommand{\GSclosedUnitBoule}[1]{\adh{\GSunitBoule{#1}}}
+
+\newcommand{\GSweakTopo}[1]{\sigma(#1, #1^{*})}
+\newcommand{\GSpreweakTopo}[1]{\sigma(#1^{*}, #1)}
+
+%GSendomorphism
+\newcommand{\GSendomorphism}[1]{End(#1)}
+
+%GShomomorphisme
+\newcommand{\GShomomorphisme}[3][]
+{
+	Hom_{#1}(#2, #3)
+}
+
+%GShomomorphismeDef
+% Deprecated !! Use instead directly \GShomomorsphisme
+\newcommand{\GShomomorphismeDef}[3][]
+{
+	\GShomomorphisme{#1}{#2}{#3}
+}
+
+%GScontinueEndo
+\newcommand{\GScontinueEndo}[2][]
+{
+	\mathcal{L}_{#1}(#2)
+}
+
+%\GScontinueHomo
+\newcommand{\GScontinueHomo}[3][]
+{
+	\mathcal{L}_{#1}(#2; #3)
+}
+
+%\GScompactEndo
+\newcommand{\GScompactEndo}[1]{\mathcal{K}(#1)}
+
+%\GScompactHomo
+\newcommand{\GScompactHomo}[2]{\mathcal{K}(#1; #2)}
+
+\newcommand{\GSfiniteRankHomo}[2]{\mathcal{R}_{f}(#1; #2)}
+\newcommand{\GSfiniteRankEndo}[1]{\mathcal{R}_{f}(#1)}
+
+\newcommand{\GSisomorphisme}[1]{Isom(#1)}
+\newcommand{\GSisomorphismeHomo}[2]{Isom(#1; #2)}
+\newcommand{\GSisometryEndo}[1]{Isom(#1)}
+
+\newcommand{\jacobienneMatrix}[2]{J_{#1}(#2)}
+\newcommand{\hessienneMatrix}[2]{\mathcal{H}_{#1}(#2)}
+%-------------------------------------------------------------------------------
+%Model theory
+
+\def\satisfies{\vdash}
+\newcommand{\lang}[1]{\mathcal{#1}}
+\newcommand{\theory}[1]{\mathcal{#1}}
+\newcommand{\struct}[1]{\mathcal{#1}}
+
+%Definissable set
+%	1 : order of the definissable sets
+%	2 : the l-structure which we define the definissable sets on.
+\newcommand{\definissableSet}[2][]
+{
+	Def^{#1}(#2)
+}
+
+%Type set
+%	1 : n if it's the set of n-types.
+%	2 : the theory which we build the types on.
+\newcommand{\typeSet}[2]{S_{#1}(#2)}
+
+%Ultraproduct
+%	1 : indice elements
+%	2 : set which contains indices
+%	3 : ultrafilter
+%	4 : models represention
+\newcommand{\GSultraproduct}[4]{\displaystyle {\prod_{#1 \in #2}}^{#3}#4_{#1}}
+
+%Ultrapower
+%	1 : indice elements
+%	2 : set which contains indices
+%	3 : ultrafilter
+%	4 : model
+\newcommand{\ultrapower}[4]{\displaystyle {\prod_{#1 \in #2}}^{#3} #4}
+
+%Substructures
+\def\substructure{\subseteq}
+
+%Elementary Substructures.
+\def\elemSubstructure{\preceq}
+
+\def\existentiallyClosed{\underset{e.c}{\subseteq}}
+%-------------------------------------------------------------------------------
+
+%	Hilbert space
+\def\Hilbert{\mathcal{H}}
+\newcommand{\GSortho}[1]{#1^{\perp}}
+\def\GSid{\cong}
+\newcommand{\dotprod}[2]{\bra{#1}\ket{#2}}
+\newcommand{\adjointe}[1]{#1^{*}}
+%-------------------------------------------------------------------------------
+
+%	Group representions
+\newcommand{\GSrepr}[2]{Repr(#1, #2)}
+\newcommand{\GSreprf}[2]{Repr_{f}(#1, #2)}
+\newcommand{\GSrepri}[2]{Repr_{i}(#1, #2)}
+%-------------------------------------------------------------------------------
+
+%Probability
+
+%	Borelian
+\newcommand{\borelian}[1]{\mathcal{B}(#1)}
+
+%	Laws
+\newcommand{\lawBernouilli}[1]{\mathcal{B}(1, #1)}
+\newcommand{\lawBinomial}[2]{\mathcal{B}(#1, #2)}
+\newcommand{\lawExponential}[1]{e(#1)}
+\newcommand{\lawPoisson}[1]{\mathcal{P}(#1)}
+\newcommand{\lawNormal}[2]{\mathcal{N}(#1, #2)}
+\newcommand{\lawUniform}[1]{\mathcal{U}(#1)}
+\newcommand{\lawCauchy}{\mathcal{C}}
+
+%	Variables
+\def\varFollow{\sim}
+\def\varSameLaw{\overset{\mathcal{L}}{=}}
+\def\varIndependant{\perp}
+%-------------------------------------------------------------------------------
