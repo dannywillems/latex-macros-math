@@ -8,6 +8,7 @@
 \newcommand{\complex}{\mathbb{C}}
 %-------------------------------------------------------------------------------
 
+%-------------------------------------------------------------------------------
 %Logical
 %% Basics
 \def\implies{\Rightarrow}
@@ -20,35 +21,52 @@
 \newcommand{\hyperelement}[1]{\hyperelementUltra{#1}{\mathcal{U}}}
 %-------------------------------------------------------------------------------
 
+%-------------------------------------------------------------------------------
 % Calculability
 \def\recursiveFunctionsSet{\mathcal{R}}
 \def\primitiveRecursiveFunctionSet{\mathcal{RP}}
 \def\muRecursiveFunctionSet{\mathcal{R}_{\mu}}
 %-------------------------------------------------------------------------------
 
-%Set theory
+%-------------------------------------------------------------------------------
+% Set theory
 \def\union{\cup} %Union
 \def\inter{\cap} %Intersection
 \newcommand{\comp}[1]{#1^{c}} %Complementary
 \def\cartprod{\cross}
 \newcommand{\cardinal}[1]{|#1|}
 \newcommand{\powerSet}[1]{\mathcal{P}(#1)}
+
+%% GSsequence :
+%		#1 : represention of elements of the sequences
+%		#2 : indices
+%		#3 : set definition
+\newcommand{\GSsequence}[3]{(#1_{#2})_{#2 \in #3}}
+
+%% GSsetDef :
+%		#1 : set elements
+\newcommand{\GSset}[1]{\left\{ #1 \right\}}
+
+%% GSsetDef :
+%		#1 : global set
+%		#2 : condition
+\newcommand{\GSsetDef}[2]{\left\{#1 \, | \, #2 \right\}}
+
+%% GSfunction :
+%       #1 : name function
+%       #2 : begin set
+%       #3 : end set
+\newcommand{\GSfunction}[3]{#1 : #2 \rightarrow #3}
 %-------------------------------------------------------------------------------
 
-%Topology
-\def\interior{\mathring}
-\def\adh{\overline}
 %-------------------------------------------------------------------------------
-
-%Algebra
-
 % Linear algebra
 
 \newcommand{\matrixSpace}[2]{M_{#1}(#2)}
 \newcommand{\inversibleMatrixSpace}[2]{GL_{#1}(#2)}
 \newcommand{\spanspace}[1]{\left<#1\right>}
 
-% Group theory
+%% Group theory
 
 \def\isomorphe{\simeq}
 \newcommand{\ordergroup}[1]{|#1|}
@@ -56,48 +74,33 @@
 \newcommand{\generatedGroup}[1]{\left<#1\right>}
 \newcommand{\permutationGroup}[1]{\mathfrak{S}(#1)}
 
-% Ring extension
+%% Ring extension
 
 \newcommand{\integralClosure}[1]{\overline{#1}}
 \newcommand{\integralClosureIn}[2]{\overline{#1}_{#2}}
 
-% Field theory
+%% Field theory
 
-%extensionDegree
+%%% extensionDegree
 \newcommand{\extensionDegree}[2]{[#1 : #2]}
 \newcommand{\extensionField}[2]{#1/#2}
 
 \newcommand{\algebraicCloture}[1]{\overline{#1}}
 
-%plongement
+%% plongement
 \newcommand{\plongement}[3]{Hom_{#1}(#2, #3)}
 
-%Galois group
+%% Galois group
 \newcommand{\galoisGroup}[2]{G(#1, #2)}
 
-% Spectrum Theory
+%% Spectrum Theory
 \newcommand{\spectrum}[1]{\sigma(#1)}
 \newcommand{\resolvant}[1]{\rho(#1)}
 
 \def\Ldeux{\mathcal{L}^{2}}
 \def\Ldeuxstar{(\mathcal{L}^{2})^{*}}
 
-%GSsequence :
-%		#1 : represention of elements of the sequences
-%		#2 : indices
-%		#3 : set definition
-\newcommand{\GSsequence}[3]{(#1_{#2})_{#2 \in #3}}
-
-%GSsetDef :
-%		#1 : set elements
-\newcommand{\GSset}[1]{\left\{ #1 \right\}}
-
-%GSsetDef :
-%		#1 : global set
-%		#2 : condition
-\newcommand{\GSsetDef}[2]{\left\{#1 \, | \, #2 \right\}}
-
-%GSprodSet :
+%% GSprodSet :
 %		#1 : indice
 %		#2 : begin indice
 %		#3 : end indice
@@ -127,12 +130,6 @@
 
 % segment: all points between two points given
 \newcommand{\segment}[2]{S(#1, #2)}
-
-%GSfunction :
-%       #1 : name function
-%       #2 : begin set
-%       #3 : end set
-\newcommand{\GSfunction}[3]{#1 : #2 \rightarrow #3}
 
 %GSnorme : Deprecated --> \norm
 %		#1 : elements which norme is applied on
@@ -164,6 +161,10 @@
 
 \newcommand{\GSweakTopo}[1]{\sigma(#1, #1^{*})}
 \newcommand{\GSpreweakTopo}[1]{\sigma(#1^{*}, #1)}
+
+% Topology
+\def\interior{\mathring}
+\def\adh{\overline}
 
 %GSendomorphism
 \newcommand{\GSendomorphism}[1]{End(#1)}
