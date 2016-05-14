@@ -13,16 +13,55 @@
 %% Basics
 \def\implies{\Rightarrow}
 \def\equivalence{\Leftrightarrow}
-\newcommand\hyperstructure[1]{ { }^{*}#1}
 
 %% Non standard analysis
+%%% Hyperstructure and hyperelements
+\newcommand\hyperstructure[1]{ { }^{*}#1}
 \def\hyperreal{\hyperstructure{\real}}
-\newcommand{\hyperelementUltra}[2]{[\GSsequence{#1}{n}{\naturel}]_{#2}}
-\newcommand{\hyperelement}[1]{\hyperelementUltra{#1}{\mathcal{U}}}
+\newcommand{\hyperelement}[1]{ { }^{*} #1}
+\newcommand{\hyperelementUltra}[2]{ { }^{*} #1_{#2}}
+\newcommand{\hyperelementSequence}[1]{[#1_{n}]}
+\newcommand{\hyperelementSequenceNoIndice}[1]{[#1]}
+\newcommand{\hyperelementSequenceFull}[1]{[(#1_{n})_{n \in \naturel}]}
+\newcommand{\hyperelementSequenceFullNoIndice}[1]{[(#1)_{n \in \naturel}]}
+\newcommand{\hyperelementSequenceUltra}[2]{[#1_{n}]_{#2}}
+
+%%% Superstructure
+\newcommand{\superstructureOf}[1]{V(#1)}
+
+%%% Non standard version.
+\newcommand{\nonStandardVersion}[1]{[#1]}
+
+%%% Standard Part
 \newcommand{\standardPart}[1]{st(#1)}
 \newcommand{\standardPartExpo}[1]{ {}^{\circ} #1}
-\newcommand{\internalSet}[1]{Fin(#1)}
-\newcommand{\nonStandard}[1]{ { }^{*} #1}
+
+%%% Finite set
+\newcommand{\finiteSet}[1]{Fin(#1)}
+
+%%% Internal set and function.
+\newcommand{\internalSet}[1]{[#1_{n}]}
+\newcommand{\internalSetNoIndice}[1]{[#1]}
+\newcommand{\setOfInternalSet}[1]{In(#1)}
+
+\newcommand{\internalFunction}[1]{[#1_{n}]}
+\newcommand{\internalFunctionNoIndice}[1]{[#1]}
+
+%%% Monad
+\newcommand{\monadOf}[1]{\mu(#1)}
+
+%%% Infinely closed
+\def\infinelyClosed{\approx}
+
+%%% Near standard part of an element
+\newcommand{\nearStandard}[1]{ns(#1)}
+\newcommand{\nearStandardSetOf}[1]{ns(#1)}
+\newcommand{\preNearStandard}[1]{pns(#1)}
+\newcommand{\preNearStandardSetOf}[1]{pns(#1)}
+
+%%% Superstructure
+\newcommand{\superstructure}[1]{V(#1)}
+
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
@@ -36,8 +75,6 @@
 % Set theory
 \def\union{\cup} %Union
 \def\inter{\cap} %Intersection
-\def\bunion{\bigcup} %Union
-\def\binter{\bigcap} %Intersection
 \newcommand{\comp}[1]{#1^{c}} %Complementary
 \def\cartprod{\cross}
 \newcommand{\cardinal}[1]{|#1|}
